@@ -1,3 +1,3 @@
 # Nedium
->(under consconstruction 🚧👷‍)
+>(under construction 🚧👷‍)
 # **Blog Posts Web-App like Medium**
