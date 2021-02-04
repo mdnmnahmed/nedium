@@ -6,19 +6,13 @@ import Next from "../../Images/arrows/next.png";
 const Home = () => {
   const slider = useRef();
   const arr = [Demo, Demo, Demo, Demo];
-  const [disableleft, setDisableleft] = useState(true);
+  const [disableleft, setDisableleft] = useState(false);
   const [disableright, setDisableright] = useState(false);
   const [x, setX] = useState(0);
   const handleLeft = (e) => {
     setX(x+100)
-    if(x===0){
-      setDisableleft(false)
-    }
   }
   const handleRight = (e) => {
-  if(x===303){
-    setDisableright(true)
-  }
 
   if(x===-100){
     setX(x-102)
@@ -34,26 +28,6 @@ const Home = () => {
       <div className="blue-bg-container"/>
       <div className="carousel-container">
         <div className="carousel">
-          {/* <div className="slider" style={{transform:`translateX(${x}%)`}}>
-            <img src={Demo} alt="..."/>
-            <figcaption>Make the world a better<br/>
-              place with camera</figcaption>
-          </div>
-          <div className="slider" style={{transform:`translateX(${x})`}}>
-            <img src={Demo} alt="..."/>
-            <figcaption>Make the world a better<br/>
-              place with camera</figcaption>
-          </div>
-          <div className="slider" style={{transform:`translateX(${x})`}}>
-            <img src={Demo} alt="..."/>
-            <figcaption>Make the world a better<br/>
-              place with camera</figcaption>
-          </div>
-          <div className="slider" style={{transform:`translateX(${x})`}}>
-            <img src={Demo} alt="..."/>
-            <figcaption>Make the world a better<br/>
-              place with camera</figcaption>
-          </div> */}
           {
             arr.map((src,index)=>(
             <div className="slider" id={index+1} key={index+1} ref={slider} style={{transform:`translateX(${x ? x : 0}%)`}}>
